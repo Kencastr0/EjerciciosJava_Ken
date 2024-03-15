@@ -37,17 +37,18 @@ public class Main {
                     case 2:
                         try {
                             int idE = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el ID del producto a eliminar"));
-                            if (objInventario.eliminarProducto(idE)){
-                                JOptionPane.showMessageDialog(null,"Producto eliminado exitosamente");
-                            }else {
-                                JOptionPane.showMessageDialog(null,"Producto no encontrado");
-                            };
+                            if (objInventario.eliminarProducto(idE)) {
+                                JOptionPane.showMessageDialog(null, "Producto eliminado exitosamente");
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Producto no encontrado");
+                            }
+                            ;
                         } catch (Exception e) {
                             JOptionPane.showMessageDialog(null, "Carácter no valido");
                         }
                         break;
                     case 3:
-                        String nombreS = JOptionPane.showInputDialog(null,"Ingresa el nombre del producto: ");
+                        String nombreS = JOptionPane.showInputDialog(null, "Ingresa el nombre del producto: ");
                         JOptionPane.showInputDialog(objInventario.buscarPorNombre(nombreS));
                         break;
                     case 4:
