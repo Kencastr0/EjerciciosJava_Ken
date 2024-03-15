@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class EmpleadoTemporal extends Empleado{
+public class EmpleadoTemporal extends Empleado {
     private Date inicioContrato;
     private Date finContrato;
 

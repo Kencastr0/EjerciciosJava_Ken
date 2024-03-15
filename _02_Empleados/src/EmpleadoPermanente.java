@@ -1,4 +1,4 @@
-public class EmpleadoPermanente extends Empleado{
+public class EmpleadoPermanente extends Empleado {
     private String contrato;
 
     public EmpleadoPermanente(String nombre, int edad, double salario) {
