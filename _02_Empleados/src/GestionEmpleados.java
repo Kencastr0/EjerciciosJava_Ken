@@ -13,6 +13,7 @@ public class GestionEmpleados {
     public void agregarEmpleadoT(EmpleadoTemporal empleado) {
         empleadosT.add(empleado);
     }
+
     public void agregarEmpleadoP(EmpleadoPermanente empleado) {
         empleadosP.add(empleado);
     }
@@ -37,23 +38,23 @@ public class GestionEmpleados {
 
     public void mostrarEmpleadosT() {
         for (EmpleadoTemporal empleado : empleadosT) {
-            System.out.println("Nombre: " + empleado.getNombre() + "\n"+
-                    "Edad: " + empleado.getEdad() + "\n"+
-                    "ID Empleado: " + empleado.getIdEmpleado() +"\n"+
-                    "Salario: " + empleado.getSalario()+"\n"+
-                    "Inicio Contrato: "+ empleado.getInicioContrato()+"\n"+
-                    "Fin Contrato: "+empleado.getFinContrato()+"\n"
+            System.out.println("Nombre: " + empleado.getNombre() + "\n" +
+                    "Edad: " + empleado.getEdad() + "\n" +
+                    "ID Empleado: " + empleado.getIdEmpleado() + "\n" +
+                    "Salario: " + empleado.getSalario() + "\n" +
+                    "Inicio Contrato: " + empleado.getInicioContrato() + "\n" +
+                    "Fin Contrato: " + empleado.getFinContrato() + "\n"
             );
         }
     }
 
     public void mostrarEmpleadosP() {
         for (EmpleadoPermanente empleado : empleadosP) {
-            System.out.println("Nombre: " + empleado.getNombre() + "\n"+
-                    "Edad: " + empleado.getEdad() + "\n"+
-                    "ID Empleado: " + empleado.getIdEmpleado() +"\n"+
-                    "Salario: " + empleado.getSalario()+"\n"+
-                    "Tipo de Contrato: "+ empleado.getContrato()+"\n"
+            System.out.println("Nombre: " + empleado.getNombre() + "\n" +
+                    "Edad: " + empleado.getEdad() + "\n" +
+                    "ID Empleado: " + empleado.getIdEmpleado() + "\n" +
+                    "Salario: " + empleado.getSalario() + "\n" +
+                    "Tipo de Contrato: " + empleado.getContrato() + "\n"
             );
         }
     }

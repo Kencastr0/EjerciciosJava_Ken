@@ -1,12 +1,12 @@
-public class Producto {
+public class Estudiante {
     private int id;
     private String nombre;
-    private double precio;
+    private String email;
 
-    public Producto(int id, String nombre, double precio) {
+    public Estudiante(int id, String nombre, String email) {
         this.id = id;
         this.nombre = nombre;
-        this.precio = precio;
+        this.email = email;
     }
 
     public int getId() {
@@ -25,21 +25,19 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public double getPrecio() {
-        return precio;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
     public String toString() {
-        return "\n" + "Producto: " + "\n" +
-                "id= " + id + "\n" +
+        return "Estudiante\n" +
+                "id=" + id + "\n" +
                 "nombre= " + nombre + "\n" +
-                "precio= " + precio +
-                "\n";
+                "email= " + email + "\n";
     }
 }
-
