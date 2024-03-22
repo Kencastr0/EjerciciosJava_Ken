@@ -17,7 +17,7 @@ public class AutorModel implements CRUD {
         Connection objConnection = ConfigDB.openConnection();
         Autor obj = (Autor) object;
         try {
-            String sql = "insert into autores(nombre,nacionalidad) values(?,?);";
+            String sql = "insert into autor(nombre,nacionalidad) values(?,?);";
             PreparedStatement objPreparedStatement = objConnection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             //asignar los signos de interrogación
             objPreparedStatement.setString(1, obj.getNombre());
@@ -43,7 +43,7 @@ public class AutorModel implements CRUD {
         Connection objConnection = ConfigDB.openConnection();
         List<Object> listAutores = new ArrayList<>();
         try {
-            String sql = "SELECT * FROM autores ORDER BY autores.id ASC;";
+            String sql = "SELECT * FROM autor ORDER BY autores.id ASC;";
             PreparedStatement objPreparedStatement = objConnection.prepareStatement(sql);
             ResultSet objResult = objPreparedStatement.executeQuery();
             while (objResult.next()) {
@@ -54,7 +54,7 @@ public class AutorModel implements CRUD {
                 listAutores.add(objAutor);
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Data acquisition Error"+e.getMessage());
+            JOptionPane.showMessageDialog(null, "Data acquisition Error" + e.getMessage());
         }
 
         ConfigDB.closeConnection();
@@ -66,7 +66,7 @@ public class AutorModel implements CRUD {
         Autor objAutor = null;
 
         try {
-            String sql = "SELECT * FROM autores WHERE id = ?;";
+            String sql = "SELECT * FROM autor WHERE id = ?;";
             PreparedStatement objPreparedS = objConnection.prepareStatement(sql);
             objPreparedS.setInt(1, id);
             ResultSet objResult = objPreparedS.executeQuery();
@@ -90,7 +90,7 @@ public class AutorModel implements CRUD {
         Connection objConnection = ConfigDB.openConnection();
 
         try {
-            String sql = "UPDATE autores SET nombre = ?, nacionalidad = ? WHERE id = ?;";
+            String sql = "UPDATE autor SET nombre = ?, nacionalidad = ? WHERE id = ?;";
             PreparedStatement objPrepared = objConnection.prepareStatement(sql);
             objPrepared.setString(1, objAutor.getNombre());
             objPrepared.setString(2, objAutor.getNacionalidad());
@@ -113,7 +113,7 @@ public class AutorModel implements CRUD {
         Connection objConnection = ConfigDB.openConnection();
         Autor objAutor = (Autor) object;
         try {
-            String sql = "DELETE FROM autores WHERE id = ?;";
+            String sql = "DELETE FROM autor WHERE id = ?;";
             PreparedStatement objPrepared = objConnection.prepareStatement(sql);
             objPrepared.setInt(1, objAutor.getId());
             int totalAffectedRows = objPrepared.executeUpdate();

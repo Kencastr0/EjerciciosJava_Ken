@@ -9,15 +9,13 @@ public class ConfigDB {
 
     public static Connection openConnection() {
         try {
-
             //control alt shift j es lo mismo que el control d
-
             //class forName permite obtener o implementar el driver
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Creamos variables con nuestra credenciales de la base de datos
-            String url = "jdbc:mysql://bwkdj3lwthi8cwwgviib-mysql.services.clever-cloud.com/bwkdj3lwthi8cwwgviib";
-            String user = "ujf6qjvkiaxy9nm5";
-            String password = "yX3hvvAYYOG7LufyKW1N";
+            String url = "jdbc:mysql://bmtzgp9k5h6cq7qerkc2-mysql.services.clever-cloud.com/bmtzgp9k5h6cq7qerkc2";
+            String user = "uydus3l0teourrj3";
+            String password = "IWUgrxJlfvpH1xMezxcK";
             //Establecemos la conexión
             objConnection = DriverManager.getConnection(url, user, password);
             System.out.println("Successful connection!");

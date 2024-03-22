@@ -6,7 +6,6 @@ import javax.swing.*;
 public class MenuControlador {
 
 
-
     public void menuPrincipal() {
         String option = "";
         do {
@@ -45,14 +44,19 @@ public class MenuControlador {
                     objAC.insertA();
                     break;
                 case "2":
+                    objAC.updateA();
                     break;
                 case "3":
+                    objAC.deleteA();
                     break;
                 case "4":
+                    objAC.all();
                     break;
                 case "5":
                     break;
+
             }
+
         } while (!optionA.equals("6"));
     }
 
@@ -61,14 +65,14 @@ public class MenuControlador {
         String optionL = "";
         do {
             optionL = JOptionPane.showInputDialog("""
-                    MENU
+                     MENU
                     1. Nuevo Libro:               
-                    2. Editar Información Libro:                    
-                    3. Eliminar Libro:
-                    4. Mostrar todos los Libros:
-                    5. Buscar Libro:
-                    6. Salir.
-                    """);
+                     2. Editar Información Libro:                    
+                     3. Eliminar Libro:
+                     4. Mostrar todos los Libros:
+                      5. Buscar Libro:
+                     6. Salir.
+                      """);
             switch (optionL) {
                 case "1":
                     break;
@@ -83,6 +87,4 @@ public class MenuControlador {
             }
         } while (!optionL.equals("6"));
     }
-
-
 }
